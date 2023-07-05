@@ -18,8 +18,11 @@ pipeline{
           }
         }
         stage('sub-job2'){
+          when {
+            branch 'slave-trialv1'
+          }
           steps{
-            echo 'action2'
+            sh 'df -h'
           }
         }
         stage('sub-job3'){
