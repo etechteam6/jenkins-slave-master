@@ -7,7 +7,7 @@ pipeline{
   stages{
     stage('version-control'){
       steps{
-        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-cred', url: 'https://github.com/etechteam6/jenkins-slave-master.git']])
+        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-creds', url: 'https://github.com/etechteam6/jenkins-slave-master.git']])
       }
     }
     stage('parallel-job'){
