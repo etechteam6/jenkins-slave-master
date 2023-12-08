@@ -19,7 +19,7 @@ pipeline{
         }
         stage('sub-job2'){
           when {
-            branch 'slave-trialv1'
+            branch 'main'
           }
           steps{
             sh 'df -h'
